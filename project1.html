@@ -54,10 +54,10 @@ TAB = JSON.stringify([
 PEOPLE = JSON.parse(TAB)
 
 let homme = function myFunction() {
-let nombreHomme = 0;
-  PEOPLE.forEach(function(personne) {
-  	personne.sex == 'm' ? nombreHomme++ : null;
-  });
+    let nombreHomme = 0;
+    PEOPLE.forEach(function(personne) {
+        personne.sex == 'm' ? nombreHomme++ : null;
+    });
     return nombreHomme;
 }
 document.getElementById("demo").innerHTML = homme(); 
