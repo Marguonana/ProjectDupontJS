@@ -6,6 +6,14 @@
 
 <p>myFunction() is the same as window.myFunction().</p>
 
+<select id="demandeInfoListe">
+    <option value="nbHomme">Nombre d'hommes</option> 
+    <option value="nbFemme" selected>Nombre de femmes</option>
+    <option value="ageMoyen">Moyenne d'âge</option>
+    <option value="plusVieux">Plus agé des hommes</option> <!-- Plus vieu après une date -->
+    <option value="ageMoyen">Moyenne d'âge</option>
+  </select>
+
 <p id="demo"></p>
 
 <script>
@@ -53,14 +61,17 @@ TAB = JSON.stringify([
 
 PEOPLE = JSON.parse(TAB)
 
-let homme = function myFunction() {
+let nbHomme = function myFunction() {
     let nombreHomme = 0;
     PEOPLE.forEach(function(personne) {
         personne.sex == 'm' ? nombreHomme++ : null;
     });
-    return nombreHomme;
+    return nbHomme;
 }
-document.getElementById("demo").innerHTML = homme(); 
+
+
+document.getElementById("demo").innerHTML = nbHomme(); 
+
 </script>
 
 </body>
